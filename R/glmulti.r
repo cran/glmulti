@@ -439,11 +439,11 @@ setMethod("consensus", signature(xs="list"), function (xs, confsetsize, ...)
 {
 	lespaul = list()
 	for (i in xs) {
-	if (class(i)=="glmulti")
+	if (inherits(i, "glmulti"))
 		lespaul=c(lespaul, i)
-	else if (class(i)=="character") {
+	else if (inherits(i,"character")) {
 			paul = readRDS(file=i)
-			if (class(paul)=="glmulti")
+			if (inherits(paul, "glmulti"))
 				lespaul=c(lespaul,paul)
 		}
 	}
@@ -1013,7 +1013,7 @@ function(y, xr, data, exclude, name, intercept, marginality , bunch, chunk, chun
 	# proceed with leaps model selection
 	f <- as.formula(paste(y, paste(xq[-1], collapse="+"),sep="~"))
 	try(regsubsets(f, data = databis, nbest = confsetsize, really.big=T, intercept=intercept), silent=F)-> lilo				
-	if (class(lilo)== "try-error") 
+	if (inherits(lilo, "try-error")) 
 					stop("!call to regsubsets failed.")
 	summary(lilo, matrix=T, matrix.logical=T)-> mama
 	mama[[7]] -> coda

@@ -69,7 +69,7 @@ A vertical line is drawn at 80%, which is a useful landmark.
   \item{elapsed }{The actual (system) time it took.  For genetic algorithm only.}
   \item{includeobjects}{A boolean indicating whether fitted model objects are contained in the object.}
 }
-\references{Calcagno \& de Mazancourt 2010 J. Stat. Soft. v34 i12. See http://www.jstatsoft.org/v34/i12}
+\references{Calcagno & de Mazancourt 2010 J. Stat. Soft. v34 i12. See http://www.jstatsoft.org/v34/i12}
 
 \author{Vincent Calcagno, McGill University}
 

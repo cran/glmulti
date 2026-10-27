@@ -26,7 +26,7 @@ consensus(xs, confsetsize = NA, ...)
 \value{
  A standard object of class \code{glmulti}
 }
-\references{Calcagno \& de Mazancourt 2010 J. Stat. Soft. v34 i12. See http://www.jstatsoft.org/v34/i12}
+\references{Calcagno & de Mazancourt 2010 J. Stat. Soft. v34 i12. See http://www.jstatsoft.org/v34/i12}
 
 \author{Vincent Calcagno, McGill University}
 

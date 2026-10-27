@@ -12,14 +12,36 @@ The output can be used for model selection, variable selection, and multimodel i
 
 \usage{
 #  glmulti S4 generic 
-glmulti(y, xr, data, exclude = c(), name = "glmulti.analysis", 
-		intercept = TRUE, marginality = FALSE,
-		bunch=30, chunk = 1, chunks = 1, level = 2,
-		minsize = 0, maxsize = -1, minK = 0, maxK = -1,
-		method = "h", crit = "aic", confsetsize = 100, popsize = 100, 
-		mutrate = 10^-3, sexrate = 0.1, imm = 0.3, plotty = TRUE,
-		report = TRUE, deltaM = 0.05, deltaB = 0.05, conseq = 5,
-		fitfunction = "glm", resumefile = "id", includeobjects=TRUE, ...)
+glmulti(y, xr, data,
+	exclude = c(),
+	name = "glmulti.analysis",
+	intercept = TRUE,
+	 marginality = FALSE,
+	 bunch=30,
+	 chunk = 1,
+	 chunks = 1,
+	 level = 2, 
+	 minsize = 0,
+	 maxsize = -1,
+	 minK = 0,
+	 maxK = -1,
+	 method = "h",
+	 crit = "aic",
+	 confsetsize = 100,
+	 popsize = 100,
+	 mutrate = 10^-3,
+	 sexrate = 0.1,
+	 imm = 0.3,
+	 plotty = TRUE,
+	 report = TRUE,
+	 deltaM = 0.05,
+	 deltaB = 0.05,
+	 conseq = 5,
+	 fitfunction = "glm",
+	 resumefile = "id",
+	 includeobjects=TRUE,
+	 ...)
+
 }
 
 \arguments{
@@ -96,7 +118,7 @@ When running a genetic algorithm, two tiny \code{java} files (serialized objects
 \references{ 
 Buckland (1997) Model Selection: an Integral Part of Inference. Biometrics 10:41
 Burnham & Anderson (2002) Model Selection and Multimodel Inference: an Information Theoretic Approach
-Calcagno \& de Mazancourt 2010 J. Stat. Soft. v34 i12. See http://www.jstatsoft.org/v34/i12
+Calcagno & de Mazancourt 2010 J. Stat. Soft. v34 i12. See http://www.jstatsoft.org/v34/i12
 
 }
 \author{Vincent Calcagno, McGill University, Canada }
@@ -106,8 +128,8 @@ Calcagno \& de Mazancourt 2010 J. Stat. Soft. v34 i12. See http://www.jstatsoft.
 
 \examples{
 # See the document "glmulti.pdf" included in the package.
-# It explains the general approach and shows how to use 
-# glmulti with mixed models from the lme4 package.
+# It explains the general approach 
+# and shows how to use glmulti with mixed models from the lme4 package.
 # Other examples:
 # A. This shows how to do the same for zero-inflated poisson models
 # we load the required package
@@ -121,8 +143,7 @@ vb = runif(100)
 zeroinfl.glmulti=function(formula, data, inflate = "|1",...)  {
     zeroinfl(as.formula(paste(deparse(formula), inflate)),data=data,...)
 } 
-# The default getfit and aicc method will work for zeroinfl objects,
-# so no need to redefine them
+# The default getfit and aicc method will work for zeroinfl objects, so no need to redefine them
 # we can proceed directly
 glmulti(vy2~va*vb,fitfunc=zeroinfl.glmulti,inflate="|1")->bab
 
@@ -136,7 +157,7 @@ glm(as.formula(paste(deparse(formula), always)), data=data, ...)
 glmulti(vy2~va,level=1,fitfunc=glm.redefined,always="+vb")-> bab
 # va will be shuffled but vb is always included in the models
 
-# this procedure allows support of arbitrarily any fitting function, 
+# this procedure allows support of arbitrarily any fitting function,
 # or the use of sophisticated constraints on the model structure
 
 }

@@ -83,4 +83,7 @@ Fixed typo in qaic/qaicc (thanks to Marin Greenwood)
 Version 1.0.8 (2020-05-25)
 Fixed: calls to deprecated functions windows() and .readRDS() have been suppressed and updated
 
+Version 1.0.9 (2026-10-25)
+Fixed: NOTE messages upon check because of syntax incompliances in some documentation files
+
 

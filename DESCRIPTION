@@ -1,6 +1,6 @@
 Package: glmulti
-Version: 1.0.8
-Date: 2020-05-25
+Version: 1.0.9
+Date: 2026-10-25
 Title: Model Selection and Multimodel Inference Made Easy
 Author: Vincent Calcagno [aut, cre]
 Maintainer: Vincent Calcagno <vincent.calcagno@inrae.fr>
@@ -17,7 +17,7 @@ Description: Automated model selection and model-averaging. Provides a
         models. Features a Genetic Algorithm to find the best models
         when an exhaustive screening of the candidates is not feasible.
 License: GPL (>= 2)
-Packaged: 2020-05-26 07:56:26 UTC; cvince
+Packaged: 2026-10-27 18:48:34 UTC; cvince
 NeedsCompilation: no
 Repository: CRAN
-Date/Publication: 2020-05-26 11:00:08 UTC
+Date/Publication: 2026-10-27 20:10:02 UTC

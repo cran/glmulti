@@ -9,8 +9,7 @@ from the models in the confidence set (or a subset of them). They are equivalent
 }
 \usage{
 # S3 coef method for class 'glmulti'
-\method{coef}{glmulti}(object, select="all", varweighting="Buckland",
-		icmethod="Lukacs", alphaIC=0.05,  ...)
+\method{coef}{glmulti}(object, select="all", varweighting="Buckland", icmethod="Lukacs", alphaIC=0.05,  ...)
 
 # S3 predict method for class 'glmulti'
 \method{predict}{glmulti}(object, select="all", newdata=NA, se.fit=FALSE, 
@@ -23,8 +22,8 @@ from the models in the confidence set (or a subset of them). They are equivalent
 	\item{select}{A specification of which models should be used for inference. By default all models are used, see below. }
 	
 	\item{varweighting}{The method to be used to compute the unconditional 
-	variance. "Buckland" (the default) (implements the approach presented in Buckland et al. 1997. "Johnson" implements a slightly different approach recommended in Johnson \& Omland 2004 and proposed at page 235 in 
-	 Burnham \& Anderson 2002. The latter results in slightly bigger estimates of the unconditional variance of model coefficients. }
+	variance. "Buckland" (the default) (implements the approach presented in Buckland et al. 1997. "Johnson" implements a slightly different approach recommended in Johnson & Omland 2004 and proposed at page 235 in 
+	 Burnham & Anderson 2002. The latter results in slightly bigger estimates of the unconditional variance of model coefficients. }
 	
 	\item{icmethod}{Method to construct confidence intervals. One of 
 	"Standard", "Burnham" or "Lukacs". The three methods differ in their 
@@ -48,7 +47,7 @@ If it more than one, models within \emph{x} IC units from the best model are use
 \value{
 
 
-\code{coef} returns a data.frame with model-averaged estimates of the different parameters in the models, as well as their unconditional variance, importance, and confidence interval according to one of three methods: "Standard" simply assumes a Normal distribution of the estimator (Buckland 1997), "Lukacs" assumes a Student distribution with degrees of freedom taken to be averaged across models (see Lukacs et al. 2010), and "Burnham" is a more sophisticated Student-based method proposed by Burnham \& Anderson 2002. 
+\code{coef} returns a data.frame with model-averaged estimates of the different parameters in the models, as well as their unconditional variance, importance, and confidence interval according to one of three methods: "Standard" simply assumes a Normal distribution of the estimator (Buckland 1997), "Lukacs" assumes a Student distribution with degrees of freedom taken to be averaged across models (see Lukacs et al. 2010), and "Burnham" is a more sophisticated Student-based method proposed by Burnham & Anderson 2002. 
  
 
 \code{predict} returns a list of three elements: the multi-model predictions, their variability (unconditional variance and confidence interval, if \code{se.fit=T}), and the number of NA predicted values that were treated as zeros when averaging models.
@@ -57,8 +56,8 @@ If it more than one, models within \emph{x} IC units from the best model are use
 }
 \references{ 
 Buckland et al. 1997. Model selection: an integral part of inference. Biometrics.
-Burnham \& Anderson. 2002. Model Selection and Multimodel Inference. An Information Theoretic Practical Approach.
-Johnson \& Omland. 2004. Model selection in ecology and evolution. TREE.
+Burnham & Anderson. 2002. Model Selection and Multimodel Inference. An Information Theoretic Practical Approach.
+Johnson & Omland. 2004. Model selection in ecology and evolution. TREE.
 Lukacs et al. 2010..Model selection bias and Freedman's paradox. Annals of the Institute of Statistical Mathematics.   
 }
 \author{Vincent Calcagno, McGill University}
